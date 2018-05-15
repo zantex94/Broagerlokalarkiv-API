@@ -28,9 +28,65 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="models\answer\answer.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="models\answer\get.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="models\answer\index.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="models\answer\post.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="models\gamequestion\gamequestion.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="models\game\game.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="models\game\get.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="models\game\index.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="models\game\post.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="models\index.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="models\question\get.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="models\question\index.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="models\question\post.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="models\question\question.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="models\roundquestion\index.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="models\roundquestion\roundquestion.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="server.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="models\" />
+    <Folder Include="models\game\" />
+    <Folder Include="models\gamequestion\" />
+    <Folder Include="models\answer\" />
+    <Folder Include="models\question\" />
+    <Folder Include="models\roundquestion\" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
