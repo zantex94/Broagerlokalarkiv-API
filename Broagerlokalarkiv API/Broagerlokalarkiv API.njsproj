@@ -28,10 +28,13 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="models\answer\all.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="models\answer\answer.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="models\answer\get.js">
+    <Compile Include="models\answer\single.js">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="models\answer\index.js">
@@ -43,10 +46,19 @@
     <Compile Include="models\gamequestion\gamequestion.js">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="models\gamequestion\index.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="models\gamequestion\post.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="models\game\all.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="models\game\game.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="models\game\get.js">
+    <Compile Include="models\game\single.js">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="models\game\index.js">
@@ -58,7 +70,10 @@
     <Compile Include="models\index.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="models\question\get.js">
+    <Compile Include="models\question\all.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="models\question\single.js">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="models\question\index.js">
@@ -71,6 +86,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="models\roundquestion\index.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="models\roundquestion\post.js">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="models\roundquestion\roundquestion.js">
