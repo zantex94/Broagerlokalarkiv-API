@@ -1,0 +1,9 @@
+{
+  "name": "broagerlokalarkiv-api",
+  "version": "0.0.0",
+  "description": "Broagerlokalarkiv API",
+  "main": "server.js",
+  "author": {
+    "name": "renes"
+  }
+}
