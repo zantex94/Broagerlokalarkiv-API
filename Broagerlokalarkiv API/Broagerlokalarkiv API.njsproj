@@ -28,67 +28,67 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="models\answer\all.js">
+    <Compile Include="controller\answer\all.js">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="models\answer\answer.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="models\answer\single.js">
+    <Compile Include="controller\answer\single.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="models\answer\index.js">
+    <Compile Include="controller\answer\index.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="models\answer\post.js">
+    <Compile Include="controller\answer\post.js">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="models\gamequestion\gamequestion.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="models\gamequestion\index.js">
+    <Compile Include="controller\gamequestion\index.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="models\gamequestion\post.js">
+    <Compile Include="controller\gamequestion\post.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="models\game\all.js">
+    <Compile Include="controller\game\all.js">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="models\game\game.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="models\game\single.js">
+    <Compile Include="controller\game\single.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="models\game\index.js">
+    <Compile Include="controller\game\index.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="models\game\post.js">
+    <Compile Include="controller\game\post.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="models\index.js">
+    <Compile Include="controller\index.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="models\question\all.js">
+    <Compile Include="controller\question\all.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="models\question\single.js">
+    <Compile Include="controller\question\single.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="models\question\index.js">
+    <Compile Include="controller\question\index.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="models\question\post.js">
+    <Compile Include="controller\question\post.js">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="models\question\question.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="models\roundquestion\index.js">
+    <Compile Include="controller\roundquestion\index.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="models\roundquestion\post.js">
+    <Compile Include="controller\roundquestion\post.js">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="models\roundquestion\roundquestion.js">
@@ -99,12 +99,18 @@
     <Content Include="README.md" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="controller\answer\" />
+    <Folder Include="controller\game\" />
+    <Folder Include="controller\gamequestion\" />
+    <Folder Include="controller\roundquestion\" />
+    <Folder Include="controller\question\" />
     <Folder Include="models\" />
     <Folder Include="models\game\" />
     <Folder Include="models\gamequestion\" />
     <Folder Include="models\answer\" />
     <Folder Include="models\question\" />
     <Folder Include="models\roundquestion\" />
+    <Folder Include="controller\" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />

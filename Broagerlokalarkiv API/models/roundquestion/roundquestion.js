@@ -5,4 +5,4 @@ var RoundquestionSchema = new Schema({
     id: Int,
     isCorrectAnswer: Boolean
 });
-module.exports = mongoose.model('roundquestion.js', RoundquestionSchema);
+module.exports = mongoose.model('roundquestion', RoundquestionSchema);

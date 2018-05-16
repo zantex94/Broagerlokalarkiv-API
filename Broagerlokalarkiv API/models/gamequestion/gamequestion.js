@@ -6,4 +6,4 @@ var GamequestionSchema = new Schema({
     name: String,
     date: Int
 });
-module.exports = mongoose.model('gamequestion.js', GamequestionSchema);
+module.exports = mongoose.model('gamequestion', GamequestionSchema);

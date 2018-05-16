@@ -8,4 +8,4 @@ var QuestionSchema = new Schema({
     picture: File,
     hint: String
 });
-module.exports = mongoose.model('question.js', QuestionSchema);
+module.exports = mongoose.model('question', QuestionSchema);

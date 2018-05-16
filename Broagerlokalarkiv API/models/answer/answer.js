@@ -7,4 +7,4 @@ var AnswerSchema = new Schema({
     answerType: String,
     picture: File
 });
-module.exports = mongoose.model('answer.js', AnswerSchema);
+module.exports = mongoose.model('answer', AnswerSchema);
