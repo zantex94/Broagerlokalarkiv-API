@@ -1,12 +1,9 @@
 ﻿const gameQuestion = require('express').Router();
-
+const bodyParser = require('body-parser').json();
 
 const post = require('./post');
 
-console.log("inside Gamequestion");
-
-
-gameQuestion.post('/', post);
+gameQuestion.post('/', bodyParser, post);
 
 module.exports = gameQuestion;
 

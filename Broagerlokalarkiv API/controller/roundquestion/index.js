@@ -1,11 +1,9 @@
 ﻿const roundQuestion = require('express').Router();
+const bodyParser = require('body-parser').json();
 
 const post = require('./post');
 
-console.log("inside Roundquestion");
-
-
-roundQuestion.post('/', post);
+roundQuestion.post('/', bodyParser, post);
 
 module.exports = roundQuestion;
 

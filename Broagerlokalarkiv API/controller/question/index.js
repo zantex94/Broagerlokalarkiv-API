@@ -1,14 +1,13 @@
 ﻿const router = require('express').Router();
+const bodyParser = require('body-parser').json();
 
 const all = require('./all');
 const single = require('./single');
 const post = require('./post');
 
-console.log("inside Question");
-
 router.get('/', all);
 router.get('/:questionId', single);
-router.post('/', post);
+router.post('/', bodyParser, post);
 
 module.exports = router;
 

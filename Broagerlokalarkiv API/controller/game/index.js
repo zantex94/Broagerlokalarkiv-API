@@ -1,14 +1,13 @@
 ﻿const router = require('express').Router();
+const bodyParser = require('body-parser').json();
 
 const all = require('./all');
 const single = require('./single');
 const post = require('./post');
 
-console.log("inside Game");
-
 router.get('/', all);
 router.get('/:gameId', single);
-router.post('/', post);
+router.post('/', bodyParser, post);
 
 module.exports = router;
 
