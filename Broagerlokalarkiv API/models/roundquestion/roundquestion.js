@@ -2,7 +2,10 @@
 var Schema = mongoose.Schema;
 
 var RoundquestionSchema = new Schema({
-    id: Int,
+    id: Number,
+    questionId: Number,
+    answerId: Number,
     isCorrectAnswer: Boolean
+
 });
 module.exports = mongoose.model('roundquestion', RoundquestionSchema);

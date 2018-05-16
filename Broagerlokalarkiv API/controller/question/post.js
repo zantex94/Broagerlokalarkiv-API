@@ -1,10 +1,7 @@
-﻿var Question = require('../../models/question');
+﻿var Question = require('../../models/question/question');
 const bodyParser = require('body-parser');
-var router = require('express').Router();
 
-
-module.exports = (req, res) => {
-    router.router('./question').post(function (req, res) {
+    module.exports = (req, res) => {
         var question = new Question(req.body);
         Question.find({}, function (err, questions) {
             if (err)
@@ -16,5 +13,5 @@ module.exports = (req, res) => {
                 res.send(err);
             res.status(201).json(question);
         });
-    });
-}
+        });
+    };

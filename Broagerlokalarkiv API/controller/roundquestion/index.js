@@ -5,7 +5,7 @@ const post = require('./post');
 console.log("inside Roundquestion");
 
 
-roundQuestion.get('/', post);
+roundQuestion.post('/', post);
 
 module.exports = roundQuestion;
 

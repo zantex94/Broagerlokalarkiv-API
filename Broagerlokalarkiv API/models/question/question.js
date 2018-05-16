@@ -2,10 +2,10 @@
 var Schema = mongoose.Schema;
 
 var QuestionSchema = new Schema({
-    questionId: Int,
+    questionId: Number,
     description: String,
     questionType: String,
-    picture: File,
+    picture: String,
     hint: String
 });
 module.exports = mongoose.model('question', QuestionSchema);

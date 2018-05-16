@@ -1,22 +1,21 @@
-﻿var Answer = require('../../models/answer');
-const bodyParser = require('body-parser');
-var router = require('express').Router();
-
+﻿var Answer = require('../../models/answer/answer');
 
 module.exports = (req, res) => {
-    router.route('./answer').post(function (req, res) {
-        var answer = new Answer(req.body);
-        Answer.find({}, function (err, answers) {
+    var answer = new Answer(req.body);
+    Answer.find({}, function (err, answers) {
+        if (err)
+            res.send(err);
+        var nextId;
+        if (answers.length > 0) {
+            nextId = answers[answers.length - 1].answerId + 1;
+        } else {
+            nextId = 1;
+        }
+        answer.answerId = nextId;
+        answer.save(function (err) {
             if (err)
                 res.send(err);
-            var nextId = answers[answers.length - 1].answerId + 1;
-            answer.answerId = nextId;
-            answer.save(function (err) {
-                if (err)
-                    res.send(err);
-                res.status(201).json(answer);
-            });
-        })
-       
+            res.status(201).json(answer);
+        });
     });
-}
+};

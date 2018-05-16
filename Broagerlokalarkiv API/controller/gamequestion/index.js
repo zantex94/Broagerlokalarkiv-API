@@ -6,7 +6,7 @@ const post = require('./post');
 console.log("inside Gamequestion");
 
 
-gameQuestion.get('/', post);
+gameQuestion.post('/', post);
 
 module.exports = gameQuestion;
 

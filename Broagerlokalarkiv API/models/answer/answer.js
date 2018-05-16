@@ -2,9 +2,9 @@
 var Schema = mongoose.Schema;
 
 var AnswerSchema = new Schema({
-    answerId: Int,
+    answerId: Number,
     description: String,
     answerType: String,
-    picture: File
+    picture: String
 });
 module.exports = mongoose.model('answer', AnswerSchema);

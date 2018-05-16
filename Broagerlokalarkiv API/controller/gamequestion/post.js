@@ -1,10 +1,7 @@
-﻿var gameQuestion = require('../../models/gamequestion');
+﻿var gameQuestion = require('../../models/gamequestion/gamequestion');
 const BodyParser = require('body-parser');
-var router = require('express').Router();
 
-
-module.exports = (req, res) => {
-    router.router('./gamequestion').post(function (req, res) {
+    module.exports = (req, res) => {
         gameQuestion.find({}, function (err, gameQuestions) {
             if (err)
                 res.send(err);
@@ -16,5 +13,6 @@ module.exports = (req, res) => {
                 res.send(err);
             res.status(201).json(saveGamequsetions);
         });
-    });
-}
+        });
+    };
+     

@@ -2,8 +2,8 @@
 var Schema = mongoose.Schema;
 
 var GameSchema = new Schema({
-    gameId: bigint,
+    gameId: Number,
     name: String,
-    date: Int
+    date: Number
 });
 module.exports = mongoose.model('game', GameSchema);
