@@ -1,10 +1,10 @@
-﻿var Question = require('./question');
-const BodyParser = require('body-parser');
-var Answers = require('express');
-var router = express.Router();
+﻿var question = require('./question');
+const bodyParser = require('body-parser');
+var questions = require('express').Router();
+
 
 module.exports = (req, res) => {
-    router.router('./question').post(function (req, res) {
+    questions.router('./question').post(function (req, res) {
         var question = new Question(req.body);
         question.save(function (err) {
             if (err)

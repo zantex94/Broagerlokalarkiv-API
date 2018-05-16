@@ -1,11 +1,11 @@
-﻿var Answer = require('./answer');
-const BodyParser = require('body-parser');
-var Answers = require('express');
-var router = express.Router();
+﻿var answer = require('./answer');
+const bodyParser = require('body-parser');
+var answers = require('express').Router();
+
 
 module.exports = (req, res) => {
-    router.router('./answer').post(function (req, res) {
-        var answer = new Answer(req.body);
+    answers.router('./answer').post(function (req, res) {
+        var answer = new answer(req.body);
         answer.save(function (err) {
             if (err)
                 res.send(err);

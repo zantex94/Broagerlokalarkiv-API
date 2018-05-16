@@ -1,11 +1,11 @@
-﻿var answer = require('./game');
+﻿var game = require('./game');
 const bodyParser = require('body-parser');
-var answers = require('express');
+var games = require('express').Router();
 
 module.exports = (req, res) => {
 
-    router.router('./game/:gameId').get(function (req, res) {
-        Answer.findOne({ id: req.params.gameId }.findOne, { _id: 0 }, function (err, gameId) {
+    games.router('./game/:gameId').get(function (req, res) {
+        game.findOne({ id: req.params.gameId }.findOne, { _id: 0 }, function (err, gameId) {
             if (err)
                 res.send(err);
             res.status(201).json(gameId);

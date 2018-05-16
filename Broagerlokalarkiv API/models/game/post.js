@@ -1,15 +1,15 @@
-﻿var Game = require('./game');
-const BodyParser = require('body-parser');
-var Answers = require('express');
-var router = express.Router();
+﻿var game = require('./game');
+const bodyParser = require('body-parser');
+var games = require('express').Router();
+
 
 module.exports = (req, res) => {
-    router.router('./game').post(function (req, res) {
-        var answer = new Answer(req.body);
-        answer.save(function (err) {
+    games.router('./game').post(function (req, res) {
+        var saveGame = new game(req.body);
+        saveGame.save(function (err) {
             if (err)
                 res.send(err);
-            res.status(201).json(answer);
+            res.status(201).json(saveGame);
         });
     });
 }
