@@ -7,7 +7,7 @@
     "name": "renes"
   },
   "dependencies": {
-    "body-parser": "^1.18.2",
+    "body-parser": "^1.18.3",
     "express": "^4.16.2",
     "jsonwebtoken": "^8.2.1",
     "mongoose": "^5.0.2"
