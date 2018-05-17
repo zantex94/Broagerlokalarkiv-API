@@ -6,7 +6,7 @@ module.exports = (req, res) => {
         if (err)
             res.send(err);
         var nextId;
-        if (GameQuestion.length > 0) {
+        if (gameQuestions.length > 0) {
             nextId = gameQuestions[gameQuestions.length - 1].id + 1;
         } else {
             nextId = 1;
