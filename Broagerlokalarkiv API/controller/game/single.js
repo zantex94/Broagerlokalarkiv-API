@@ -3,9 +3,9 @@ const bodyParser = require('body-parser');
 
 
 module.exports = (req, res) => {
-    Game.findOne({}, { _id: 0, _v: 0 }, function (err, gameId) {
+    Game.findOne({ gameId: req.params.gameId }, { _id: 0, __v: 0 }, function (err, game) {
         if (err)
             res.send(err);
-        res.status(201).json(gameId);
+        res.status(201).json(game);
     });
 };

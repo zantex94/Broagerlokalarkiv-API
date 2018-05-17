@@ -1,17 +1,17 @@
-﻿var gameQuestion = require('../../models/gamequestion/gamequestion');
+﻿var GameQuestion = require('../../models/gamequestion/gamequestion');
 
 module.exports = (req, res) => {
-    var saveGamequsetions = new gameQuestion(req.body);
-    gameQuestion.find({}, function (err, gameQuestions) {
+    var saveGamequsetions = new GameQuestion(req.body);
+    GameQuestion.find({}, function (err, gameQuestions) {
         if (err)
             res.send(err);
         var nextId;
-        if (gameQuestion.length > 0) {
+        if (GameQuestion.length > 0) {
             nextId = gameQuestions[gameQuestions.length - 1].id + 1;
         } else {
             nextId = 1;
         }
-        gameQuestion.id = nextId;
+        saveGamequsetions.id = nextId;
         saveGamequsetions.save(function (err) {
             if (err)
                 res.send(err);

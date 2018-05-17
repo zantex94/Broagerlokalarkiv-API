@@ -1,9 +1,9 @@
 ﻿var Game = require('../../models/game/game');
 
 module.exports = (req, res) => {
-    Game.find({}, { _id: 0, _v: 0 }, function (err, gameId) {
+    Game.find({}, { _id: 0, __v: 0 }, function (err, games) {
         if (err)
             res.send(err);
-        res.status(201).json(gameId);
+        res.status(201).json(games);
     });
 };

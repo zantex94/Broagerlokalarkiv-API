@@ -1,9 +1,9 @@
 ﻿var Question = require('../../models/question/question');
 
 module.exports = (req, res) => {
-    Question.find({}, { _id: 0, _v: 0 }, function (err, questionId) {
+    Question.find({}, { _id: 0, __v: 0 }, function (err, questions) {
         if (err)
             res.send(err);
-        res.status(201).json(questionId);
+        res.status(201).json(questions);
     });
 };

@@ -11,7 +11,7 @@ module.exports = (req, res) => {
         } else {
             nextId = 1;
         }
-        RoundQuestion.id = nextId;
+        saveRoundquestion.id = nextId;
         saveRoundquestion.save(function (err) {
             if (err)
                 res.send(err);

@@ -11,7 +11,7 @@ module.exports = (req, res) => {
         } else {
             nextId = 1;
         }
-        Game.gameId = nextId;
+        saveGame.gameId = nextId;
         saveGame.save(function (err) {
             if (err)
                 res.send(err);

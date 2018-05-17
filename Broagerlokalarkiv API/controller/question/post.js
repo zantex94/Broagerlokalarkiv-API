@@ -11,7 +11,7 @@ module.exports = (req, res) => {
         } else {
             nextId = 1;
         }
-        Question.questionId = nextId;
+        question.questionId = nextId;
         question.save(function (err) {
             if (err)
                 res.send(err);

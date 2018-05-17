@@ -1,9 +1,9 @@
 ﻿var Question = require('../../models/question/question');
 
 module.exports = (req, res) => {
-    Question.findOne({ id: req.params.gameId }, { _id: 0 }, function (err, questionId) {
+    Question.findOne({ questionId: req.params.questionId }, { _id: 0, __v:0 }, function (err, question) {
         if (err)
             res.send(err);
-        res.status(201).json(questionId);
+        res.status(201).json(question);
     });
 };
