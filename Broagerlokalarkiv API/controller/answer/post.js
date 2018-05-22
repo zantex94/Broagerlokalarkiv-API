@@ -2,7 +2,7 @@
 
 module.exports = (req, res) => {
     var answer = new Answer(req.body);
-    Answer.find({}, function (err, answers) {
+    Answer.find({}, { _id: 0, __v: 0 }, function (err, answers) {
         if (err)
             res.send(err);
         var nextId;

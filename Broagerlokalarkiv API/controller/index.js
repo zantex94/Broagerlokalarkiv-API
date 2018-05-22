@@ -7,6 +7,7 @@ const roundQuestion = require('./roundquestion');
 const router = require('express').Router();
 const bodyParser = require('body-parser').json;
 
+// this method should always be in this index to gain Access-Control-Allow-Origin
 router.use(function (req, res, next) {
     // added to response
     res.header("Access-Control-Allow-Origin", "*");
