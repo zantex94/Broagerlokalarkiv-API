@@ -38,6 +38,9 @@
     <Compile Include="controller\answer\put.js">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="controller\gamequestion\all.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="controller\gamequestion\delete.js">
       <SubType>Code</SubType>
     </Compile>
@@ -54,6 +57,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="controller\question\put.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="controller\roundquestion\all.js">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="controller\roundquestion\delete.js">
