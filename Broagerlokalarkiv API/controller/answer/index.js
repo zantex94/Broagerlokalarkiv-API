@@ -13,7 +13,7 @@ router.get('/', all);
 router.get('/:answerId', single);
 router.post('/', bodyParser, post);
 router.delete('/:answerId', remove);
-router.put('/:answerId', put);
+router.put('/:answerId', bodyParser, put);
 
 
 module.exports = router;
