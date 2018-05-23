@@ -2,7 +2,7 @@
 
 module.exports = (req, res) => {
     var saveRoundquestion = new RoundQuestion(req.body);
-    RoundQuestion.find({}, function (err, roundQuestions) {
+    RoundQuestion.find({}, { _id: 0, __v: 0 },function (err, roundQuestions) {
         if (err)
             res.send(err);
         var nextId

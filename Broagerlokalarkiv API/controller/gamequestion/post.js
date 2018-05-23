@@ -2,7 +2,7 @@
 
 module.exports = (req, res) => {
     var saveGamequsetions = new GameQuestion(req.body);
-    GameQuestion.find({}, function (err, gameQuestions) {
+    GameQuestion.find({}, { _id: 0, __v: 0 }, function (err, gameQuestions) {
         if (err)
             res.send(err);
         var nextId;

@@ -41,13 +41,25 @@
     <Compile Include="controller\gamequestion\delete.js">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="controller\gamequestion\put.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="controller\game\delete.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="controller\game\put.js">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="controller\question\delete.js">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="controller\question\put.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="controller\roundquestion\delete.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="controller\roundquestion\put.js">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="models\answer\answer.js">
