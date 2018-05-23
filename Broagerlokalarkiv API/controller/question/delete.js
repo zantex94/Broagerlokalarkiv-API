@@ -4,6 +4,6 @@ module.exports = (req, res) => {
     Question.deleteOne({ questionId: req.params.questionId }, function (err, questions) {
         if (err)
             res.send(err);
-        res.status(500).json(questions);
+        res.status(204).json(questions);
     });
 }
