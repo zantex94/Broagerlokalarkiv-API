@@ -2,6 +2,7 @@
 
 module.exports = (req, res) => {
     var roundQuestion = req.body;
+    roundQuestion.id = req.params.id;
     RoundQuestion.findOneAndUpdate({ id: req.params.id }, { $set: roundQuestion }, function (err, roundQuestion) {
         if (err)
             res.send(err);
